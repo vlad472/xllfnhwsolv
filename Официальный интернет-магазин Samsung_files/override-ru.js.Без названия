@@ -1,0 +1,1 @@
+$("head").append('<style id="extended" type="text/css">.icon-ru-flag{display:none!important}</style>');

@@ -1,0 +1,29 @@
+_satellite.pushAsyncScript(function(event, target, $variables){
+  //Starocm Local Global site tag (gtag.js)
+var ghead0 = document.getElementsByTagName("head")[0];
+var gscript0 = document.createElement("script");
+gscript0.src = "https://www.googletagmanager.com/gtag/js?id=DC-6689022";
+gscript0.onload = function(){
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments);}
+   gtag('js', new Date());
+
+   gtag('config', 'DC-6689022');
+};
+ghead0.appendChild(gscript0);
+
+
+
+//Starcom WW Global site tag (gtag.js)
+var ghead1 = document.getElementsByTagName("head")[0];
+var gscript1 = document.createElement("script");
+gscript1.src = "https://www.googletagmanager.com/gtag/js?id=DC-8717217";
+gscript1.onload = function(){
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments);}
+   gtag('js', new Date());
+
+   gtag('config', 'DC-8717217');
+};
+ghead1.appendChild(gscript1);
+});

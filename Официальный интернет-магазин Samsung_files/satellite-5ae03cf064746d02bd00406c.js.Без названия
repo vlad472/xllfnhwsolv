@@ -1,0 +1,15 @@
+function fcTrack(){
+  	var tagVal = arguments[0];
+  	var fcData = arguments[1];
+  	var agent;
+  	_satellite.setVar('fcData',fcData);
+  	_satellite.setVar('tagVal',tagVal);
+  
+    var len = arguments.length;
+    if(len==3){
+       agent = arguments[2];
+  		_satellite.setVar('agent',agent);
+    }
+  
+   	_satellite.track('floatingChat');
+}

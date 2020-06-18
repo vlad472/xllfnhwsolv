@@ -1,0 +1,496 @@
+_satellite.pushAsyncScript(function(event, target, $variables){
+  //Yandex.Metrika counter
+try {
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function () {
+            try {
+                w.yaCounter48052160 = new Ya.Metrika2({
+                    id: 48052160,
+                    clickmap: true,
+                    trackLinks: true,
+                    accurateTrackBounce: true,
+                    webvisor: true,
+                    trackHash: true,
+                    ecommerce: "dataLayer"
+                });
+            } catch (e) {
+            }
+        });
+        var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () {
+            n.parentNode.insertBefore(s, n);
+        };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/tag.js";
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else {
+            f();
+        }
+    })(document, window, "yandex_metrika_callbacks2");
+} catch (ex) {
+}
+// End Yandex.Metrika counter
+
+//RuTarget
+(function (w, d, s, p) {
+    var f = d.getElementsByTagName(s)[0], j = d.createElement(s);
+    j.async = true;
+    j.src = '//cdn.rutarget.ru/static/tag/tag.js';
+    f.parentNode.insertBefore(j, f);
+    w[p] = {rtgNoSync: false, rtgSyncFrame: true};
+})(window, document, 'script', '_rtgParams');
+
+setTimeout(function () {
+    var _rutarget = window._rutarget || [];
+    _rutarget.push({'event': 'otherPage'});
+}, 1000);
+// End RuTarget
+
+// VK
+//<div id="vk_api_transport"></div>
+var elem = document.createElement('div');
+elem.id = 'vk_api_transport';
+document.body.appendChild(elem);
+window.vkAsyncInit = function () {
+    VK.Retargeting.Init('VK-RTRG-224200-gz4oF');
+    VK.Retargeting.Hit();
+};
+
+setTimeout(function () {
+    var el = document.createElement("script");
+    el.type = "text/javascript";
+    el.src = "https://vk.com/js/api/openapi.js?150";
+    el.async = true;
+    document.getElementById("vk_api_transport").appendChild(el);
+}, 0);
+
+//END VK
+
+// Facebook Pixel Code
+
+!function (f, b, e, v, n, t, s) {
+    if (f.fbq) return;
+    n = f.fbq = function () {
+        n.callMethod ?
+            n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+    };
+    if (!f._fbq) f._fbq = n;
+    n.push = n;
+    n.loaded = !0;
+    n.version = '2.0';
+    n.queue = [];
+    t = b.createElement(e);
+    t.async = !0;
+    t.src = v;
+    s = b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t, s)
+}(window, document, 'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '776810339173169');
+fbq('track', 'PageView');
+
+// End Facebook Pixel Code
+
+// Rating@Mail.ru counter
+
+var _tmr = window._tmr || (window._tmr = []);
+_tmr.push({id: "3032379", type: "pageView", start: (new Date()).getTime()});
+(function (d, w, id) {
+    if (d.getElementById(id)) return;
+    var ts = d.createElement("script");
+    ts.type = "text/javascript";
+    ts.async = true;
+    ts.id = id;
+    ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+    var f = function () {
+        var s = d.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(ts, s);
+    };
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else {
+        f();
+    }
+})(document, window, "topmailru-code");
+
+// End Rating@Mail.ru counter
+
+//IgnitionOne - Data-collection Tag All Pages
+(function () {
+    var Data = {}
+        , i = Data, d = document, u = encodeURIComponent, x = z = '', j = d.createElement('script'),
+        r = d.referrer, s = d.getElementsByTagName('script')[0];
+    j.type = 'application/javascript';
+    j.async = !0;
+    r && r.split(/[/:?]/)[3] != d.location.hostname && (i.ref = r);
+    for (y in i)
+        x += '&' + y + '=' + u(i[y]);
+    j.src = '//emea-samsung.netmng.com/'
+        + '?aid=5905' + x;
+    s.parentNode.insertBefore(j, s);
+})();
+//End IgnitionOne - Data-collection Tag
+
+// Floodlight
+if (digitalData.page.pageInfo.pageTrack == "shop order confirmation") {
+    var axel = Math.random() + "";
+    var a = axel * 10000000000000;
+    var dcIMG = document.createElement('iframe');
+    dcIMG.setAttribute('src', "https://ad.doubleclick.net/ddm/activity/src=6689022;type=pc_tt008;cat=pc_tt0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;ord=" + a + "?");
+    dcIMG.setAttribute('height', '1');
+    dcIMG.setAttribute('width', '1');
+    dcIMG.setAttribute('Border', '0');
+    dcIMG.setAttribute('style', 'display:none');
+    document.body.appendChild(dcIMG);
+}
+// End Floodloght
+
+
+/**
+ * Common functions: "senders" and price clean
+ */
+
+// price "cleaning" function
+function cleanPrice(price) {
+    return price.replace(/\.0?0/g, '').replace(/\D/g, '') + '.00';
+}
+
+// mail.ru dynamic remarketing pixel function
+// product, cart
+function mailSend(conf) {
+    var _tmr = window._tmr || (window._tmr = []);
+    (function (d, w, id) {
+        if (d.getElementById(id)) return;
+        var ts = d.createElement("script");
+        ts.type = "text/javascript";
+        ts.async = true;
+        ts.id = id;
+        ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+        var f = function () {
+            var s = d.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ts, s);
+        };
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else {
+            f();
+        }
+    })(document, window, "topmailru-code");
+    var _tmr = _tmr || [];
+    _tmr.push({
+        type: 'itemView',
+        productid: conf['products'],
+        pagetype: conf['type'],
+        list: '1',
+        totalvalue: conf['price']
+    });
+}
+
+// vk dynamic remarketing pixel function
+// view_category, view_product, add_to_cart
+function vkSend(conf) {
+    if (typeof VK !== "undefined") {
+        var eventParams = {
+            "products": conf['products']
+        };
+        if (conf['type'] !== 'view_category') {
+            eventParams["business_value"] = 0;
+            eventParams["total_price"] = conf['price']
+        }
+        VK.Retargeting.ProductEvent(1613, conf['type'], eventParams);
+    } else {
+        setTimeout(vkSend, 250, conf);
+    }
+}
+
+// facebook dynamic remarketing pixel function
+// ViewContent, AddToCart, InitiateCheckout
+function fbSend(conf) {
+    var fb_data = {
+        content_type: 'product',
+        cats_data: (typeof conf['cats_data'] === 'undefined' ? [] : conf['cats_data'])
+    };
+    if (conf['track'] === 'track') {
+        fb_data['value'] = conf['price'];
+        fb_data['currency'] = 'RUB';
+        fb_data['contents'] = conf['products']
+    } else if (conf['track'] === 'trackCustom') {
+        fb_data['content_ids'] = conf['products']
+    }
+    fbq(conf['track'], conf['type'], fb_data);
+}
+
+if (digitalData.page.pageInfo.pageTrack === "shop category") {
+    setTimeout(function () {
+        /**
+         * Following tag should fire on category listing pages
+         * mask: shop.samsung.com/ru/Все-продукты/*
+         */
+
+        var products = [];
+        var products_vc_fb = [];
+        var initial_count = 0;
+        var initial_products = $('li.product-item');
+        for (i = 0; i < initial_products.length; i++) {
+            products.push({
+                'id': initial_products[i].getElementsByClassName('product-sku')[0].innerText,
+                'price': cleanPrice(initial_products[i].getElementsByClassName('price')[0].innerText)
+            });
+            products_vc_fb.push(initial_products[i].getElementsByClassName('product-sku')[0].innerText)
+        }
+        var pre_cats = [];
+        for (var key in digitalData.page.pathIndicator) {
+            var pre_cats_value = digitalData.page.pathIndicator[key];
+            pre_cats.push(decodeURIComponent(pre_cats_value))
+        }
+        var cats_data = [];
+        for (i = 2; i < pre_cats.length; i++) {
+            if (i + 1 > pre_cats.length) {
+                break;
+            }
+            cats_data.push(pre_cats.slice(2, i + 1).join('/'))
+        }
+
+        vkSend({'type': 'view_category', 'products': products});
+        fbSend({'track': 'trackCustom', 'type': 'ViewCategory', 'products': products_vc_fb, 'cats_data': cats_data});
+        initial_count += initial_products.length;
+        console.log('initial count is ' + initial_count);
+        if (initial_count === 12) {
+            console.log('all good');
+            var prevXHR = window.XMLHttpRequest;
+
+            function newXHR() {
+                var currXHR = new prevXHR();
+                currXHR.addEventListener("readystatechange", function () {
+                    if (currXHR.readyState === 4 && currXHR.status === 200) {
+                        setTimeout(function () {
+                            var products = [];
+                            var totalProducts = $('li.product-item:not([ng-init="productSettings(related)"])');
+                            if (totalProducts.length > initial_count) {
+                                for (i = initial_count; i < totalProducts.length; i++) {
+                                    products.push({
+                                        'id': totalProducts[i].getElementsByClassName('product-sku')[0].innerText,
+                                        'price': cleanPrice(totalProducts[i].getElementsByClassName('price')[0].innerText)
+                                    })
+                                }
+                                vkSend({'type': 'view_category', 'products': products})
+                                initial_count += totalProducts.length - initial_count
+                            }
+                        }, 300)
+                    }
+                }, false);
+                return currXHR;
+            }
+
+            window.XMLHttpRequest = newXHR;
+        }
+
+        /**
+         * Product Page tag: viewContent, view_product, product
+         * Fix for Fast View button in Category listing
+         * Following tag should fire on category listing pages
+         * mask: shop.samsung.com/ru/Все-продукты/*
+         */
+
+        // pixel caller "fast view" button
+        $(document).on('click', 'div.product-quickview-cta', function () {
+            var product_id = $(this).find('button').attr('data-omni-variant');
+            var product_price = $(this).find('button').attr('data-omni-price') + '.00';
+          //console.log($(this))
+          //console.log($(this).parent().parent().find('div.product-content-wrapper div.price'))
+          //console.log($(this).parent().parent().find('div.product-content-wrapper div.price').text())
+  					var product_price = cleanPrice($(this).parent().parent().find('div.product-content-wrapper div.price').text())
+          var products_qv = [];
+            products_qv.push({"id": product_id, "price": product_price});
+            mailSend({'type': 'product', 'products': [product_id], 'price': product_price});
+            vkSend({'type': 'view_product', 'products': products_qv, 'price': product_price});
+            fbSend({'track': 'track', 'type': 'ViewContent', 'products': [{'id': product_id, 'quantity': '1', 'item_price': product_price}], 'price': product_price, 'cats_data': cats_data})
+        });
+
+        // pixel caller inside modal window upon changing product parameters (color etc)
+        $(document).on('click', 'li[class|="product-item"]', function () {
+            var product_id = $('button.btn-add-to-basket').attr('data-omni-variant');
+            var product_price = $('button.btn-add-to-basket').attr('data-omni-price') + '.00';
+          var product_price = cleanPrice($('div.product-basket div.price.ng-binding')[0].innerText)
+            var products_qv = [];
+            products_qv.push({"id": product_id, "price": product_price});
+            mailSend({'type': 'product', 'products': [product_id], 'price': product_price});
+            vkSend({'type': 'view_product', 'products': products_qv, 'price': product_price});
+            fbSend({'track': 'track', 'type': 'ViewContent', 'products': [{'id': product_id, 'quantity': '1', 'item_price': product_price}], 'price': product_price, 'cats_data': cats_data})
+        });
+
+        /**
+         * Add To Cart tag: on category listing page
+         * Fix for Fast View button in Category listing
+         * Following tag should fire on category listing pages
+         * mask: shop.samsung.com/ru/Все-продукты/*
+         */
+
+        // pixel caller on modal window
+        $(document).on('click', 'div[btn-class="btn-default btn-add-to-basket"]', function () {
+            var product_id = $(this).closest('div.product-content-wrapper').find('span.product-sku').text();
+            var product_price = cleanPrice($(this).closest('div.product-basket').find('div.price').text());
+            var products_qv = [];
+            products_qv.push({"id": product_id, "price": product_price});
+            mailSend({'type': 'cart', 'products': [product_id], 'price': product_price});
+            vkSend({'type': 'add_to_cart', 'products': products_qv, 'price': product_price});
+            fbSend({'track': 'track', 'type': 'AddToCart', 'products': [{'id': product_id, 'quantity': '1', 'item_price': product_price}], 'price': product_price, 'cats_data': cats_data})
+        });
+
+        // pixel caller in category listing
+        $(document).on('click', 'div.custom-button', function (e) {
+            var product_id = $(this).closest('.product-item').find('span.product-sku').text()
+            var product_price = cleanPrice($(this).closest('.product-item').find('div.price span').text())
+            var products_qv = [];
+            products_qv.push({"id": product_id, "price": product_price});
+            mailSend({'type': 'cart', 'products': [product_id], 'price': product_price});
+            vkSend({'type': 'add_to_cart', 'products': products_qv, 'price': product_price});
+            fbSend({'track': 'track', 'type': 'AddToCart', 'products': [{'id': product_id, 'quantity': '1', 'item_price': product_price}], 'price': product_price, 'cats_data': cats_data})
+        });
+
+    }, 1000);
+}
+
+
+if (digitalData.page.pageInfo.pageTrack === 'shop checkout' && digitalData.page.pathIndicator.depth_4 === 'delivery-address') {
+
+    /**
+     * InitiateCheckout tag: Facebook and VK
+     * Following tag should fire on cart page - https://shop.samsung.com/ru/checkout/multi/delivery-address/add
+     */
+
+
+    var products_ic = [];
+    var products_ic_custom_all = [];
+    var products_ic_vk = [];
+    var cart_items = digitalData.ecommerce.transactionProducts;
+    if (cart_items.length > 0) {
+        for (i = 0; i < cart_items.length; i++) {
+            products_ic.push({
+                'id': cart_items[i].sku,
+                'quantity': cart_items[i].quantity,
+                'item_price': cleanPrice(cart_items[i].price)
+            });
+            products_ic_vk.push({
+                'id': cart_items[i].sku,
+                'price': cleanPrice(cart_items[i].price)
+            });
+            products_ic_custom_all.push(
+                cart_items[i].category
+            )
+        }
+        var totalPrice = cleanPrice(digitalData.ecommerce.transactionTotal);
+        vkSend({
+            'type': 'init_checkout',
+            'products': products_ic_vk,
+            'price': totalPrice
+        });
+        fbSend({
+            'track': 'track',
+            'type': 'InitiateCheckout',
+            'products': products_ic,
+            'price': totalPrice,
+            'cats_data': products_ic_custom_all
+        })
+    }
+
+}
+
+
+if (digitalData.page.pageInfo.pageTrack === 'shop checkout' && digitalData.page.pathIndicator.depth_4 === 'payment-method') {
+    /**
+     * AddPaymentInfo tag: Facebook and VK
+     * Following tag should fire on cart page - https://shop.samsung.com/ru/checkout/multi/payment-method/add
+     */
+
+
+    var products_ic = [];
+    var products_ic_custom_all = [];
+    var products_ic_vk = [];
+    var cart_items = digitalData.ecommerce.transactionProducts;
+    if (cart_items.length > 0) {
+        for (i = 0; i < cart_items.length; i++) {
+            products_ic.push({
+                'id': cart_items[i].sku,
+                'quantity': cart_items[i].quantity,
+                'item_price': cleanPrice(cart_items[i].price)
+            });
+            products_ic_vk.push({
+                'id': cart_items[i].sku,
+                'price': cleanPrice(cart_items[i].price)
+            });
+            products_ic_custom_all.push(
+                cart_items[i].category
+            )
+        }
+        var totalPrice = cleanPrice(digitalData.ecommerce.transactionTotal);
+        vkSend({
+            'type': 'add_payment_info',
+            'products': products_ic_vk,
+            'price': totalPrice
+        });
+        fbSend({
+            'track': 'track',
+            'type': 'AddPaymentInfo',
+            'products': products_ic,
+            'price': totalPrice,
+            'cats_data': products_ic_custom_all
+        })
+    }
+
+}
+
+
+if (digitalData.page.pageInfo.pageTrack === "shop order confirmation") {
+
+    /**
+     * Purchase tag: on product page
+     * Following tag should fire on thank you page
+     */
+
+    var products_typ = [];
+    var products_typ_custom_all = [];
+    var products_typ_vk = [];
+    var products_typ_mt = [];
+    var items_bought = digitalData.ecommerce.transactionProducts;
+    if (items_bought.length > 0) {
+        for (i = 0; i < items_bought.length; i++) {
+            products_typ.push({
+                'id': items_bought[i].sku,
+                'quantity': items_bought[i].quantity,
+                'item_price': cleanPrice(items_bought[i].price)
+            });
+            products_typ_mt.push(
+                items_bought[i].sku
+            );
+            products_typ_vk.push({
+                'id': items_bought[i].sku,
+                'price': cleanPrice(items_bought[i].price)
+            });
+            products_typ_custom_all.push(
+                items_bought[i].category
+
+            )
+        }
+        var totalPrice = cleanPrice(digitalData.ecommerce.transactionTotal);
+        vkSend({
+            'type': 'purchase',
+            'products': products_typ_vk,
+            'price': totalPrice
+        });
+        mailSend({
+            'type': 'purchase',
+            'products': products_typ_mt,
+            'price': totalPrice
+        });
+        fbSend({
+            'track': 'track',
+            'type': 'Purchase',
+            'products': products_typ,
+            'price': totalPrice,
+            'cats_data': products_typ_custom_all
+        });
+    }
+}
+});
